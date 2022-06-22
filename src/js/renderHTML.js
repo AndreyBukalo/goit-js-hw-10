@@ -14,7 +14,7 @@ export const renderCountryList = country => {
     .map(
       ({ name, flags }) =>
         `
-            <li><img src="${flags.svg}" alt=${name} width = 45x class=flags />
+            <li><img src="${flags.svg}" alt=${name} width = 45px class=flags />
             <p>${name.common}</p></li>`
     )
     .join('');
