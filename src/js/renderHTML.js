@@ -12,9 +12,10 @@ export const renderHTML = country => {
 export const renderCountryList = country => {
   return country
     .map(
-      ({ name, official, flags }) =>
-        `<img src="${flags.svg}" alt=${name} width = 120px class=flags />
-            <li><b>${name.official}</b></li>`
+      ({ name, flags }) =>
+        `
+            <li><img src="${flags.svg}" alt=${name} width = 45x class=flags />
+            <p>${name.common}</p></li>`
     )
     .join('');
 };
@@ -23,8 +24,8 @@ export const renderCountryInfo = country => {
   return country
     .map(
       ({ name, flags, capital, population, languages }) =>
-        `<img src="${flags.svg}" alt=${name} width = 120px class=flags />
-            <h2>${name.official}</h2>
+        `<li><img src="${flags.svg}" alt=${name} width = 60px class=flags />
+            <h2>${name.common}</h2></li>
           <p><b>Capital:</b> ${capital}</p>
           <p><b>Population:</b> ${population}</p>
           <p><b>Language:</b> ${Object.values(languages)}</p>`
